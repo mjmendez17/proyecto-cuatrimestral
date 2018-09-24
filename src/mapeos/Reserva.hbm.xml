@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="datos.Reserva" table="reserva">
+		<id column="idReserva" name="idReserva">
+			<generator class="identity" />
+		</id>
+
+		<property column="codigoReserva" name="codigoReserva" type="string" />
+
+
+
+		<one-to-one name="funcion" class="datos.Funcion"></one-to-one>
+		<one-to-one name="cliente" class="datos.Cliente"></one-to-one>
+		<one-to-one name="butaca" class="datos.Butaca"></one-to-one>
+		<one-to-one name="usuario" class="datos.Usuario"></one-to-one>
+
+		<set name="descuentos" cascade="all" table="descuento" order-by="idDescuento asc"
+			inverse="true" lazy="true" fetch="select">
+			<key column="idReserva" not-null="true" />
+			<one-to-many class="datos.Descuento" />
+
+		</set>
+	</class>
+</hibernate-mapping>
