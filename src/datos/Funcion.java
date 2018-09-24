@@ -1,4 +1,4 @@
-package dao;
+package datos;
 
 public class Funcion {
 
