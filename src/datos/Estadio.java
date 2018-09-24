@@ -4,15 +4,15 @@ import java.util.List;
 
 public class Estadio {
 	
-	private int idEstadio;
+	private long idEstadio;
 	
 	private List<Butaca> listaButacas;
 
-	public int getIdEstadio() {
+	public long getIdEstadio() {
 		return idEstadio;
 	}
 
-	public void setIdEstadio(int idEstadio) {
+	public void setIdEstadio(long idEstadio) {
 		this.idEstadio = idEstadio;
 	}
 

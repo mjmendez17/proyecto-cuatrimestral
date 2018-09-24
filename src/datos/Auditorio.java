@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Auditorio {
 	
-	private int idAuditorio;
+	private long idAuditorio;
 	
 	private String descripcion;
 	
@@ -12,11 +12,11 @@ public class Auditorio {
 	
 	private Evento evento;
 
-	public int getIdAuditorio() {
+	public long getIdAuditorio() {
 		return idAuditorio;
 	}
 
-	public void setIdAuditorio(int idAuditorio) {
+	public void setIdAuditorio(long idAuditorio) {
 		this.idAuditorio = idAuditorio;
 	}
 

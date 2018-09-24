@@ -2,7 +2,7 @@ package datos;
 
 public class Butaca {
 	
-	private int idButaca;
+	private long idButaca;
 	
 	private Boolean estado;
 	
@@ -12,11 +12,11 @@ public class Butaca {
 	
 	private Sector sector;
 
-	public int getIdButaca() {
+	public long getIdButaca() {
 		return idButaca;
 	}
 
-	public void setIdButaca(int idButaca) {
+	public void setIdButaca(long idButaca) {
 		this.idButaca = idButaca;
 	}
 
