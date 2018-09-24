@@ -4,15 +4,15 @@ import java.util.List;
 
 public class Teatro {
 	
-	private int idTeatro;
+	private long idTeatro;
 	
 	private List<Butaca> listaButacas;
 
-	public int getIdTeatro() {
+	public long getIdTeatro() {
 		return idTeatro;
 	}
 
-	public void setIdTeatro(int idTeatro) {
+	public void setIdTeatro(long idTeatro) {
 		this.idTeatro = idTeatro;
 	}
 

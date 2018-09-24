@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Evento {
 	
-	private int idEvento;
+	private long idEvento;
 	
 	private String descripcion;
 	
@@ -14,11 +14,11 @@ public class Evento {
 	
 	private List<Funcion> listaFunciones;
 
-	public int getIdEvento() {
+	public long getIdEvento() {
 		return idEvento;
 	}
 
-	public void setIdEvento(int idEvento) {
+	public void setIdEvento(long idEvento) {
 		this.idEvento = idEvento;
 	}
 

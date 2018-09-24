@@ -4,15 +4,15 @@ import java.util.List;
 
 public class Sala {
 
-private int idSala;
-	
+	private long idSala;
+
 	private List<Butaca> listaButacas;
 
-	public int getIdSala() {
+	public long getIdSala() {
 		return idSala;
 	}
 
-	public void setIdSala(int idSala) {
+	public void setIdSala(long idSala) {
 		this.idSala = idSala;
 	}
 

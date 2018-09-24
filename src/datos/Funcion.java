@@ -4,7 +4,7 @@ import java.util.Calendar;
 
 public class Funcion {
 
-	private int idFuncion;
+	private long idFuncion;
 	
 	private String descripcion;
 	
@@ -14,11 +14,11 @@ public class Funcion {
 	
 	private Evento evento;
 
-	public int getIdFuncion() {
+	public long getIdFuncion() {
 		return idFuncion;
 	}
 
-	public void setIdFuncion(int idFuncion) {
+	public void setIdFuncion(long idFuncion) {
 		this.idFuncion = idFuncion;
 	}
 

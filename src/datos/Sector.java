@@ -4,21 +4,21 @@ import java.util.List;
 
 public class Sector {
 
-	private int idSector;
+	private long idSector;
 	
 	private String nombreSector;
 	 
 	private double precioAdicional;
 	
-	private int cantidadMaxima;
+	private long cantidadMaxima;
 	
 	private List<Butaca> listaButacas;
 
-	public int getIdSector() {
+	public long getIdSector() {
 		return idSector;
 	}
 
-	public void setIdSector(int idSector) {
+	public void setIdSector(long idSector) {
 		this.idSector = idSector;
 	}
 
@@ -38,11 +38,11 @@ public class Sector {
 		this.precioAdicional = precioAdicional;
 	}
 
-	public int getCantidadMaxima() {
+	public long getCantidadMaxima() {
 		return cantidadMaxima;
 	}
 
-	public void setCantidadMaxima(int cantidadMaxima) {
+	public void setCantidadMaxima(long cantidadMaxima) {
 		this.cantidadMaxima = cantidadMaxima;
 	}
 
