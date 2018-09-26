@@ -43,10 +43,4 @@ public class AuditorioABM {
 			throw new Exception("No hay Auditorios en la base de datos");
 	}
 
-	public Auditorio traerAuditorio(int idAuditorio) throws Exception {
-		Auditorio c = dao.traerAuditorio(idAuditorio);
-		if (dao.traerAuditorio(idAuditorio) == null)
-			throw new Exception("Id incorrecto: el Auditorio no existe");
-		return c;
-	}
 }

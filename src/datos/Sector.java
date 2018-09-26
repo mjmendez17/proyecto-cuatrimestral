@@ -5,20 +5,31 @@ import java.util.List;
 public class Sector {
 
 	private long idSector;
-	
+
 	private String nombreSector;
-	 
-	private double precioAdicional;
-	
-	private long cantidadMaxima;
-	
+
+	private float precioAdicional;
+
+	private int cantidadMaxima;
+
 	private List<Butaca> listaButacas;
+
+	public Sector(String nombreSector, float precioAdicional, int cantidadMaxima) {
+		super();
+		this.nombreSector = nombreSector;
+		this.precioAdicional = precioAdicional;
+		this.cantidadMaxima = cantidadMaxima;
+
+	}
+
+	public Sector() {
+	}
 
 	public long getIdSector() {
 		return idSector;
 	}
 
-	public void setIdSector(long idSector) {
+	protected void setIdSector(long idSector) {
 		this.idSector = idSector;
 	}
 
@@ -30,19 +41,19 @@ public class Sector {
 		this.nombreSector = nombreSector;
 	}
 
-	public double getPrecioAdicional() {
+	public float getPrecioAdicional() {
 		return precioAdicional;
 	}
 
-	public void setPrecioAdicional(double precioAdicional) {
+	public void setPrecioAdicional(float precioAdicional) {
 		this.precioAdicional = precioAdicional;
 	}
 
-	public long getCantidadMaxima() {
+	public int getCantidadMaxima() {
 		return cantidadMaxima;
 	}
 
-	public void setCantidadMaxima(long cantidadMaxima) {
+	public void setCantidadMaxima(int cantidadMaxima) {
 		this.cantidadMaxima = cantidadMaxima;
 	}
 
@@ -53,4 +64,11 @@ public class Sector {
 	public void setListaButacas(List<Butaca> listaButacas) {
 		this.listaButacas = listaButacas;
 	}
+
+	@Override
+	public String toString() {
+		return "Sector [idSector=" + idSector + ", nombreSector=" + nombreSector + ", precioAdicional="
+				+ precioAdicional + ", cantidadMaxima=" + cantidadMaxima + ", listaButacas=" + listaButacas + "]";
+	}
+
 }

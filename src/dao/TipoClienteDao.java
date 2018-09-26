@@ -29,7 +29,7 @@ public class TipoClienteDao {
 	/////////////////////////////////////////////////////////////////////////////////////////////
 
 	// Traer TipoTipoCliente por ID
-	public TipoCliente traerTipoTipoCliente(int idTipoCliente) throws HibernateException {
+	public TipoCliente traerTipoCliente(long idTipoCliente) throws HibernateException {
 
 		TipoCliente objeto = null;
 
@@ -84,18 +84,6 @@ public class TipoClienteDao {
 		} finally {
 			session.close();
 		}
-	}
-
-	public TipoCliente traerTipoCliente(int idTipoCliente) throws HibernateException {
-		TipoCliente objeto = null;
-		try {
-			iniciaOperacion();
-			objeto = (TipoCliente) session.createQuery("from TipoCliente c where c.dni=" + idTipoCliente)
-					.uniqueResult();
-		} finally {
-			session.close();
-		}
-		return objeto;
 	}
 
 	public List<TipoCliente> traerTipoClientes() throws HibernateException {

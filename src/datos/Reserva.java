@@ -6,23 +6,26 @@ public class Reserva {
 
 	private int idReserva;
 	private String codigoReserva;
+	private float precio;
 	private Funcion funcion;
 	private Cliente cliente;
-	private Butaca butaca;
 	private Usuario usuario;
-	private Set<Descuento> descuentos;
+	private GregorianCalendar fechaHora;
+	private Set<Butaca> listaButacas;
+	private Set<Sector> listaSectores;
 
 	public Reserva() {
 	}
 
-	public Reserva(String codigoReserva, Funcion funcion, Cliente cliente, Butaca butaca, Usuario usuario) {
+	public Reserva(String codigoReserva, float precio, Funcion funcion, Cliente cliente, Usuario usuario,
+			GregorianCalendar fechaHora) {
 		super();
 		this.codigoReserva = codigoReserva;
+		this.precio = precio;
 		this.funcion = funcion;
 		this.cliente = cliente;
-		this.butaca = butaca;
 		this.usuario = usuario;
-
+		this.fechaHora = fechaHora;
 	}
 
 	public int getIdReserva() {
@@ -41,6 +44,14 @@ public class Reserva {
 		this.codigoReserva = codigoReserva;
 	}
 
+	public float getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(float precio) {
+		this.precio = precio;
+	}
+
 	public Funcion getFuncion() {
 		return funcion;
 	}
@@ -57,14 +68,6 @@ public class Reserva {
 		this.cliente = cliente;
 	}
 
-	public Butaca getButaca() {
-		return butaca;
-	}
-
-	public void setButaca(Butaca butaca) {
-		this.butaca = butaca;
-	}
-
 	public Usuario getUsuario() {
 		return usuario;
 	}
@@ -73,17 +76,35 @@ public class Reserva {
 		this.usuario = usuario;
 	}
 
-	public Set<Descuento> getDescuentos() {
-		return descuentos;
+	public GregorianCalendar getFechaHora() {
+		return fechaHora;
 	}
 
-	public void setDescuentos(Set<Descuento> descuentos) {
-		this.descuentos = descuentos;
+	public void setFechaHora(GregorianCalendar fechaHora) {
+		this.fechaHora = fechaHora;
+	}
+
+	public Set<Butaca> getListaButacas() {
+		return listaButacas;
+	}
+
+	public void setListaButacas(Set<Butaca> listaButacas) {
+		this.listaButacas = listaButacas;
+	}
+
+	public Set<Sector> getListaSectores() {
+		return listaSectores;
+	}
+
+	public void setListaSectores(Set<Sector> listaSectores) {
+		this.listaSectores = listaSectores;
 	}
 
 	@Override
 	public String toString() {
-		return "Reserva [idReserva=" + idReserva + ", codigoReserva=" + codigoReserva + ", cliente=" + cliente + "]";
+		return "Reserva [idReserva=" + idReserva + ", codigoReserva=" + codigoReserva + ", precio=" + precio
+				+ ", funcion=" + funcion + ", cliente=" + cliente + ", usuario=" + usuario + ", fechaHora=" + fechaHora
+				+ ", listaButacas=" + listaButacas + ", listaSectores=" + listaSectores + "]";
 	}
 
 }

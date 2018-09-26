@@ -12,11 +12,11 @@ public class SectorABM {
 	public Sector traerSector(long idSector) throws Exception {
 		Sector c = dao.traerSector(idSector);
 		if (dao.traerSector(idSector) == null)
-			throw new Exception("Id incorrecto: la Sector no existe");
+			throw new Exception("Id incorrecto: el Sector no existe");
 		return c;
 	}
 
-	public int agregar(Sector sector) {
+	public long agregar(Sector sector) {
 		return dao.agregar(sector);
 
 	}
@@ -43,10 +43,4 @@ public class SectorABM {
 			throw new Exception("No hay Sectors en la base de datos");
 	}
 
-	public Sector traerSector(int idSector) throws Exception {
-		Sector c = dao.traerSector(idSector);
-		if (dao.traerSector(idSector) == null)
-			throw new Exception("Id incorrecto: la Sector no existe");
-		return c;
-	}
 }

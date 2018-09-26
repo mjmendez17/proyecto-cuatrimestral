@@ -43,10 +43,4 @@ public class EventoABM {
 			throw new Exception("No hay Eventos en la base de datos");
 	}
 
-	public Evento traerEvento(int idEvento) throws Exception {
-		Evento c = dao.traerEvento(idEvento);
-		if (dao.traerEvento(idEvento) == null)
-			throw new Exception("Id incorrecto: la Evento no existe");
-		return c;
-	}
 }

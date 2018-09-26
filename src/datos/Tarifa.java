@@ -1,22 +1,25 @@
 package datos;
 
 public class Tarifa {
-	
-	private int idTarifa;
+
+	private long idTarifa;
 	private Funcion funcion;
 	private String descripcion;
-	
+
+	public Tarifa() {
+	}
+
 	public Tarifa(Funcion funcion, String descripcion) {
 		super();
 		this.funcion = funcion;
 		this.descripcion = descripcion;
 	}
 
-	public int getIdTarifa() {
+	public long getIdTarifa() {
 		return idTarifa;
 	}
 
-	protected void setIdTarifa(int idTarifa) {
+	protected void setIdTarifa(long idTarifa) {
 		this.idTarifa = idTarifa;
 	}
 
@@ -40,7 +43,5 @@ public class Tarifa {
 	public String toString() {
 		return "Tarifa [idTarifa=" + idTarifa + ", funcion=" + funcion + ", descripcion=" + descripcion + "]";
 	}
-	
-	
 
 }

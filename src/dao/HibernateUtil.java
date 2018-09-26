@@ -18,6 +18,7 @@ public class HibernateUtil {
 				ServiceRegistry serviceRegistry = registry.buildServiceRegistry();
 				sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 			}
+
 		} catch (HibernateException he) {
 			System.err.println("ERROR en la inicialización de la SessionFactory: " + he);
 			throw new ExceptionInInitializerError(he);

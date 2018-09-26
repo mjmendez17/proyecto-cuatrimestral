@@ -11,15 +11,15 @@ public class TipoClienteABM {
 
 	TipoClienteDao dao = new TipoClienteDao();
 
-	public TipoCliente traerTipoCliente(int idTipoCliente) {
+	public TipoCliente traerTipoCliente(long idTipoCliente) {
 		TipoCliente c = dao.traerTipoCliente(idTipoCliente);
 
 		return c;
 	}
 
-	public int agregar(String tipoCliente, Descuento descuento) {
+	public int agregar(String tipoCliente, String codigoDescuento) {
 
-		TipoCliente c = new TipoCliente(tipoCliente, descuento);
+		TipoCliente c = new TipoCliente(tipoCliente, codigoDescuento);
 		return dao.agregar(c);
 	}
 
@@ -28,7 +28,7 @@ public class TipoClienteABM {
 		dao.actualizar(c);
 	}
 
-	public void eliminar(int idTipoCliente) {
+	public void eliminar(long idTipoCliente) {
 
 		TipoCliente c = dao.traerTipoCliente(idTipoCliente);
 

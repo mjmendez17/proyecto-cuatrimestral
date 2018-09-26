@@ -30,7 +30,7 @@ public class ClienteDao {
 	/////////////////////////////////////////////////////////////////////////////////////////////
 
 	// Traer Cliente por ID
-	public Cliente traerCliente(int idCliente) throws HibernateException {
+	public Cliente traerCliente(long idCliente) throws HibernateException {
 
 		Cliente objeto = null;
 

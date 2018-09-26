@@ -43,10 +43,4 @@ public class ButacaABM {
 			throw new Exception("No hay Butacas en la base de datos");
 	}
 
-	public Butaca traerButaca(int idButaca) throws Exception {
-		Butaca c = dao.traerButaca(idButaca);
-		if (dao.traerButaca(idButaca) == null)
-			throw new Exception("Id incorrecto: la Butaca no existe");
-		return c;
-	}
 }

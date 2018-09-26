@@ -4,17 +4,17 @@ public class Usuario {
 	private long idUsuario;
 	private Rol rol;
 	private String nombreUsuario;
-	private String clave;
+	private String password;
 
 	public Usuario() {
 
 	}
 
-	public Usuario(Rol rol, String nombreUsuario, String clave) {
+	public Usuario(Rol rol, String nombreUsuario, String password) {
 		super();
 		this.rol = rol;
 		this.nombreUsuario = nombreUsuario;
-		this.clave = clave;
+		this.password = password;
 	}
 
 	public long getIdUsuario() {
@@ -41,18 +41,18 @@ public class Usuario {
 		this.nombreUsuario = nombreUsuario;
 	}
 
-	public String getClave() {
-		return clave;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setClave(String clave) {
-		this.clave = clave;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	@Override
 	public String toString() {
-		return "Usuario [idUsuario=" + idUsuario + ", rol=" + rol + ", nombreUsuario=" + nombreUsuario + ", clave="
-				+ clave + "]";
+		return "Usuario [idUsuario=" + idUsuario + ", rol=" + rol + ", nombreUsuario=" + nombreUsuario + ", password="
+				+ password + "]";
 	}
 
 }

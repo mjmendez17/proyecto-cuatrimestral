@@ -4,25 +4,24 @@ import java.util.*;
 
 public class TipoCliente {
 
-	private int idTipoCliente;
+	private long idTipoCliente;
 	private String tipoCliente;
-	private Descuento descuento;
+	private String codigoDescuento;
 
 	public TipoCliente() {
 	}
 
-	public TipoCliente(String tipoCliente, Descuento descuento) {
+	public TipoCliente(String tipoCliente, String codigoDescuento) {
 		super();
-
 		this.tipoCliente = tipoCliente;
-		this.descuento = descuento;
+		this.codigoDescuento = codigoDescuento;
 	}
 
-	public int getIdTipoCliente() {
+	public long getIdTipoCliente() {
 		return idTipoCliente;
 	}
 
-	protected void setIdTipoCliente(int idTipoCliente) {
+	protected void setIdTipoCliente(long idTipoCliente) {
 		this.idTipoCliente = idTipoCliente;
 	}
 
@@ -34,17 +33,18 @@ public class TipoCliente {
 		this.tipoCliente = tipoCliente;
 	}
 
-	public Descuento getDescuento() {
-		return descuento;
+	public String getCodigoDescuento() {
+		return codigoDescuento;
 	}
 
-	public void setDescuento(Descuento descuento) {
-		this.descuento = descuento;
+	public void setCodigoDescuento(String codigoDescuento) {
+		this.codigoDescuento = codigoDescuento;
 	}
 
 	@Override
 	public String toString() {
-		return "TipoCliente [idTipoCliente=" + idTipoCliente + ", tipoCliente=" + tipoCliente + "]";
+		return "TipoCliente [idTipoCliente=" + idTipoCliente + ", tipoCliente=" + tipoCliente + ", codigoDescuento="
+				+ codigoDescuento + "]";
 	}
 
 }

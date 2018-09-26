@@ -3,22 +3,35 @@ package datos;
 import java.util.List;
 
 public class Evento {
-	
+
 	private long idEvento;
-	
+
 	private String descripcion;
-	
-	private double precioBase;
-	
+
+	private float precioBase;
+
 	private String tipoEvento;
-	
+
 	private List<Funcion> listaFunciones;
+
+	private Auditorio auditorio;
+
+	public Evento(String descripcion, float precioBase, String tipoEvento, Auditorio auditorio) {
+		super();
+		this.descripcion = descripcion;
+		this.precioBase = precioBase;
+		this.tipoEvento = tipoEvento;
+		this.auditorio = auditorio;
+	}
+
+	public Evento() {
+	}
 
 	public long getIdEvento() {
 		return idEvento;
 	}
 
-	public void setIdEvento(long idEvento) {
+	protected void setIdEvento(long idEvento) {
 		this.idEvento = idEvento;
 	}
 
@@ -30,11 +43,11 @@ public class Evento {
 		this.descripcion = descripcion;
 	}
 
-	public double getPrecioBase() {
+	public float getPrecioBase() {
 		return precioBase;
 	}
 
-	public void setPrecioBase(double precioBase) {
+	public void setPrecioBase(float precioBase) {
 		this.precioBase = precioBase;
 	}
 
@@ -52,6 +65,21 @@ public class Evento {
 
 	public void setListaFunciones(List<Funcion> listaFunciones) {
 		this.listaFunciones = listaFunciones;
+	}
+
+	public Auditorio getAuditorio() {
+		return auditorio;
+	}
+
+	public void setAuditorio(Auditorio auditorio) {
+		this.auditorio = auditorio;
+	}
+
+	@Override
+	public String toString() {
+		return "Evento [idEvento=" + idEvento + ", descripcion=" + descripcion + ", precioBase=" + precioBase
+				+ ", tipoEvento=" + tipoEvento + ", listaFunciones=" + listaFunciones + ", auditorio=" + auditorio
+				+ "]";
 	}
 
 }

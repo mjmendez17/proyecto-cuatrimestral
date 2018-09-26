@@ -1,24 +1,34 @@
 package datos;
 
-import java.util.Calendar;
+import java.util.*;
 
 public class Funcion {
 
 	private long idFuncion;
-	
+
 	private String descripcion;
-	
-	private Calendar fecha;
-	
-	private Calendar horaInicio;
-	
+
+	private GregorianCalendar fechaHora;
+
 	private Evento evento;
+
+	private List<Descuento> listaDescuentos;
+
+	public Funcion() {
+	}
+
+	public Funcion(String descripcion, GregorianCalendar fechaHora, Evento evento) {
+		super();
+		this.descripcion = descripcion;
+		this.fechaHora = fechaHora;
+		this.evento = evento;
+	}
 
 	public long getIdFuncion() {
 		return idFuncion;
 	}
 
-	public void setIdFuncion(long idFuncion) {
+	protected void setIdFuncion(long idFuncion) {
 		this.idFuncion = idFuncion;
 	}
 
@@ -30,20 +40,12 @@ public class Funcion {
 		this.descripcion = descripcion;
 	}
 
-	public Calendar getFecha() {
-		return fecha;
+	public GregorianCalendar getFechaHora() {
+		return fechaHora;
 	}
 
-	public void setFecha(Calendar fecha) {
-		this.fecha = fecha;
-	}
-
-	public Calendar getHoraInicio() {
-		return horaInicio;
-	}
-
-	public void setHoraInicio(Calendar horaInicio) {
-		this.horaInicio = horaInicio;
+	public void setFechaHora(GregorianCalendar fechaHora) {
+		this.fechaHora = fechaHora;
 	}
 
 	public Evento getEvento() {
@@ -53,5 +55,19 @@ public class Funcion {
 	public void setEvento(Evento evento) {
 		this.evento = evento;
 	}
-	
+
+	public List<Descuento> getListaDescuentos() {
+		return listaDescuentos;
+	}
+
+	public void setListaDescuentos(List<Descuento> listaDescuentos) {
+		this.listaDescuentos = listaDescuentos;
+	}
+
+	@Override
+	public String toString() {
+		return "Funcion [idFuncion=" + idFuncion + ", descripcion=" + descripcion + ", fechaHora=" + fechaHora
+				+ ", evento=" + evento + "]";
+	}
+
 }

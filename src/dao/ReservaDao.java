@@ -30,7 +30,7 @@ public class ReservaDao {
 	/////////////////////////////////////////////////////////////////////////////////////////////
 
 	// Traer Reserva por ID
-	public Reserva traerReserva(int idReserva) throws HibernateException {
+	public Reserva traerReserva(long idReserva) throws HibernateException {
 
 		Reserva objeto = null;
 

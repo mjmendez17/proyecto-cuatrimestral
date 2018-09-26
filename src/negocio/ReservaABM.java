@@ -14,15 +14,16 @@ public class ReservaABM {
 
 	ReservaDao dao = new ReservaDao();
 
-	public Reserva traerReserva(int idReserva) {
+	public Reserva traerReserva(long idReserva) {
 		Reserva c = dao.traerReserva(idReserva);
 
 		return c;
 	}
 
-	public int agregar(String codigoReserva, Funcion funcion, Cliente cliente, Butaca butaca, Usuario usuario) {
+	public int agregar(String codigoReserva, float precio, Funcion funcion, Cliente cliente, Usuario usuario,
+			GregorianCalendar fechaHora) {
 
-		Reserva c = new Reserva(codigoReserva, funcion, cliente, butaca, usuario);
+		Reserva c = new Reserva(codigoReserva, precio, funcion, cliente, usuario, fechaHora);
 		return dao.agregar(c);
 	}
 
@@ -31,7 +32,7 @@ public class ReservaABM {
 		dao.actualizar(c);
 	}
 
-	public void eliminar(int idReserva) {
+	public void eliminar(long idReserva) {
 
 		Reserva c = dao.traerReserva(idReserva);
 
